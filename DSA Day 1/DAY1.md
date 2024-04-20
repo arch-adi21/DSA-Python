@@ -36,3 +36,26 @@ Python uses dynamic array . In dynamic array whenever you just try to access the
 - Space Complexity: O(1)
 - Accessing an element in a one-dimensional array by its index is typically a constant-time operation because it directly computes the memory location of the element.
 
+### Inserting an Element at the End:
+- Time Complexity: O(1) (Amortized)
+- Space Complexity: O(1)
+- Inserting an element at the end of a one-dimensional array usually involves updating the array’s size and placing the new element in the next available position, which is a constant-time operation on average.
+
+### Inserting an Element at the Beginning:
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+- Inserting an element at the beginning of a one-dimensional array requires shifting all existing elements to make room, resulting in a linear time and space complexity.
+
+### Searching for an Element (Linear Search):
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+- In the worst case, searching for an element in a one-dimensional array may require looking at every element, resulting in a linear time complexity. The space complexity remains constant.
+
+### Deleting an Element:
+- Time Complexity: O(n)
+- space complexity: O(1)
+- In the worst case, deleting an element from the front may take O(n) time as elements after an element should be shifted by one position.
+
+
+
+
