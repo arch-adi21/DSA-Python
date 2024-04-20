@@ -58,30 +58,30 @@ Python uses dynamic array . In dynamic array whenever you just try to access the
 
 ## Big O notation for 2D Array in python
 
-Accessing an Element by Indices:
-    Time Complexity: O(1)
-    Space Complexity: O(1)
-    Accessing an element in a two-dimensional array using row and column indices is generally a constant-time operation, similar to one-dimensional arrays.
+### Accessing an Element by Indices:
+- Time Complexity: O(1)
+- Space Complexity: O(1)
+- Accessing an element in a two-dimensional array using row and column indices is generally a constant-time operation, similar to one-dimensional arrays.
 
-Inserting an Element at a Specific Position:
-    Time Complexity: O(1)
-    Space Complexity: O(1)
-    Inserting an element at a specific position in a two-dimensional array typically has a constant-time complexity because it directly computes the memory location of the element based on its indices.
+### Inserting an Element at a Specific Position:
+- Time Complexity: O(1)
+- Space Complexity: O(1)
+- Inserting an element at a specific position in a two-dimensional array typically has a constant-time complexity because it directly computes the memory location of the element based on its indices.
 
-Searching for an Element (Linear Search):
-    Time Complexity: O(m * n)
-    Space Complexity: O(1)
-    When searching for an element in a two-dimensional array, you may need to examine all elements in the worst case, resulting in a time complexity of O(m * n), where ‘m’ is the number of rows and ‘n’ is the number of columns. The space complexity remains constant because , during any search , we don't need any extra memory at all.
+### Searching for an Element (Linear Search):
+- Time Complexity: O(m * n)
+- Space Complexity: O(1)
+- When searching for an element in a two-dimensional array, you may need to examine all elements in the worst case, resulting in a time complexity of O(m * n), where ‘m’ is the number of rows and ‘n’ is the number of columns. The space complexity remains constant because , during any search , we don't need any extra memory at all.
 
-Deleting an Element:
-    Time complexity: O(m*n)
-    Space complexity: O(1)
-    Deleting an element from a 2D array requires shifting of elements after deletion operation.
+### Deleting an Element:
+- Time complexity: O(m*n)
+- Space complexity: O(1)
+- While deleting an element , you may need to search through the whole array which requires O(m*n) time. 
 
-Transposing a Matrix:
-    Time Complexity: O(m * n)
-    Space Complexity: O(m * n)
-    Transposing a two-dimensional array involves swapping elements across the diagonal. This operation requires examining and potentially swapping all elements which includes two loops of i and j to create a swap , resulting in a time complexity of O(m * n) and a space complexity of O(m * n).
+### Transposing a Matrix:
+- Time Complexity: O(m * n)
+- Space Complexity: O(m * n)
+- Transposing a two-dimensional array involves swapping elements across the diagonal. This operation requires examining and potentially swapping all elements which includes two loops of i and j to create a swap , resulting in a time complexity of O(m * n) and a space complexity of O(m * n).
 
 
 
