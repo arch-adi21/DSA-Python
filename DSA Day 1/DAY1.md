@@ -30,3 +30,9 @@ Rules of initialising a static array is very simple in any language . Tho it is 
 ## Big O notation for Array in python
 
 Python uses dynamic array . In dynamic array whenever you just try to access the index , it will always take a constant time to access any index . But whenever you try to access something elementwise , let's say find the index of 'a' in list [d,c,b,a] . The programme will iterate over each index and compare the elements in that index with the elements present at that index. This means checking over an element in a list in worst case scenario takes `O(n)` time in general.
+
+### Accessing an Element by Index:
+- Time Complexity: O(1)
+- Space Complexity: O(1)
+- Accessing an element in a one-dimensional array by its index is typically a constant-time operation because it directly computes the memory location of the element.
+
