@@ -17,7 +17,7 @@ Create a list to store these monthly expenses and using that find out,
     got a refund of 200$. Make a correction to your monthly expense list
     based on this
 
-> For solution chec the files in the same folder with question answer annotations
+> For solution check the files in the same folder with question answer annotations
 
 2. You have a list of your favourite marvel super heros.
 ```
@@ -35,10 +35,10 @@ Using this find out,
        Do that with one line of code.
     5. Sort the heros list in alphabetical order (Hint. Use dir() functions to list down all functions available in list)
 
-> For solution chec the files in the same folder with question answer annotations
+> For solution check the files in the same folder with question answer annotations
 
 
 3. Create a list of all odd numbers between 1 and a max number.
 Max number is something you need to take from a user using input() function
 
-> For solution chec the files in the same folder with question answer annotations
+> For solution check the files in the same folder with question answer annotations
