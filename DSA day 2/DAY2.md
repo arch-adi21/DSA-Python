@@ -4,7 +4,7 @@ In this module we will talk about a better method to implement list function . I
 
 ![Linked list](image.png)
 
-as you can check in the image that a s ingle data element is called `head` . It contains information or the value of the data of current head and a pointer to the location of the next head. Same goes for the next head. The pointer location in the last head is genrally empty.
+as you can check in the image that a single data element is called `Node` . The first node in any LinkedList is called `head` . It contains information or the value of the data of current head and a pointer to the location of the next head. Same goes for the next head. The pointer location in the last head is genrally empty.
 
 ## Benefits of linked list over normal list 
 
