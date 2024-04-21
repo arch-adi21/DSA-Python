@@ -71,7 +71,7 @@ class LinkedList:
             llist = ''
 
             while itr :
-                llist = str(itr.data) + '-->'
-                itr = self.nxtPointer # Now the pointer of head will lead you to next node.
+                llist = str(itr.element) + '-->'
+                itr = itr.nxtPointer # Now the pointer of head will lead you to next node.
             print (llist)
 ```
