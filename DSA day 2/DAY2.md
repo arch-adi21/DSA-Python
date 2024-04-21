@@ -113,3 +113,8 @@ class LinkedList:
 
 Typically O(n), as access requires traversal from the head to the desired position.
 Accessing an arbitrary element in the linked list requires traversal from the head to the desired position, which may involve visiting all elements.
+
+
+
+
+![alt text](image-1.png)
