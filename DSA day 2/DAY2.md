@@ -15,3 +15,21 @@ as you can check in the image that a s ingle data element is called `head` . It 
 - *Flexible:* This is because the elements in Linked List  are not stored in contiguous memory locations unlike the array.
 - *Efficient for large data:* When working with large datasets linked lists play a crucial role as it can grow and shrink dynamically.
 - *Scalability:* Contains the ability to add or remove elements at any position.
+
+## How to create a Linked list in python
+
+Linked list is not a default data type for python . For a linked list , you need to use your own logic to create a data structure. In this section i will give you a breif break-down on how to create your own linked list.
+
+```{python}
+
+# Using a class we can initiate a data type called 'Node'
+
+class Node :
+  
+  # We will initiate this data type by defining the element and the pointer through __init__ constructor
+  def __init__(self , element = None , nxtPointer = None) :
+    
+    self.element = element
+    self.nxtPointer = nxtPointer
+
+```  
