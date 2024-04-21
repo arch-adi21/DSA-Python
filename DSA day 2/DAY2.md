@@ -22,11 +22,12 @@ Linked list is not a default data type for python . For a linked list , you need
 
 ```{python}
 
-# Using a class we can initiate a data type called 'Node'
+# Using a class we can create the Node of the LinkedList
 
 class Node :
   
-  # We will initiate this data type by defining the element and the pointer through __init__ constructor
+  # We will initiate this Node by defining the element and the pointer through __init__ constructor
+
   def __init__(self , element = None , nxtPointer = None) :
     
     self.element = element
