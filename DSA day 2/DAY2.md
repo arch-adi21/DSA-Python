@@ -20,7 +20,7 @@ as you can check in the image that a single data element is called `Node` . The 
 
 Linked list is not a default data type for python . For a linked list , you need to use your own logic to create a data structure. In this section i will give you a breif break-down on how to create your own linked list.
 
-```{python}
+```python
 
 # Using a class we can create the Node of the LinkedList
 
@@ -32,5 +32,31 @@ class Node :
     
     self.element = element
     self.nxtPointer = nxtPointer
-
 ```  
+### Creating a LinkedList class
+
+Now that we have our Node class, we can use it to create our LinkedList class. The LinkedList class will have a single head element which points to the first node in the list.
+
+```python
+class LinkedList:
+    def __init__(self):
+        self.head = None
+```
+
+### Adding a Node
+We can add a node to our linked list by creating a new Node and setting it as the head if the list is empty, or by traversing the list and adding the new Node at the end.
+
+```python
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def add(self, element):
+        if not self.head:
+            self.head = Node(element)
+        else:
+            current = self.head
+            while current.nxtPointer:
+                current = current.nxtPointer
+            current.nxtPointer = Node(element)
+```
