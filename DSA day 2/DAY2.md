@@ -51,12 +51,19 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def add(self, element):
-        if not self.head:
-            self.head = Node(element)
-        else:
-            current = self.head
-            while current.nxtPointer:
-                current = current.nxtPointer
-            current.nxtPointer = Node(element)
+    def add_from_front(self, element):
+        node = Node(element , self.head)
+        self.head = node
+    
+    def print(self):
+        if self.head == None :
+            print('The Linked List is empty')
+        else :
+            itr = self.head
+            llist = ''
+
+            while itr :
+                llist = str(itr.data) + '-->'
+                itr = self.nxtPointer
+            print (llist)
 ```
