@@ -47,23 +47,31 @@ class LinkedList:
 We can add a node to our linked list by creating a new Node and setting it as the head if the list is empty, or by traversing the list and adding the new Node at the end.
 
 ```python
+
+# Create a new class LinkedList , which will use Nodes to store data .
+
 class LinkedList:
+
+    # Initiate the head of the LinkedList
     def __init__(self):
         self.head = None
 
+    #This method will help you to add an element at the head position of the linked list
     def add_from_front(self, element):
-        node = Node(element , self.head)
-        self.head = node
-    
+        node = Node(element , self.head) # assign a Node to a variable and use the previous head as the pointer
+        self.head = node # update the assigned node as the new head. 
+
+    #This method will print the Linked List
     def print(self):
         if self.head == None :
             print('The Linked List is empty')
         else :
+            #Fetch the head of the Linked List
             itr = self.head
             llist = ''
 
             while itr :
                 llist = str(itr.data) + '-->'
-                itr = self.nxtPointer
+                itr = self.nxtPointer # Now the pointer of head will lead you to next node.
             print (llist)
 ```
