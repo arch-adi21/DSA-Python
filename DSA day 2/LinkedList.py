@@ -55,6 +55,22 @@ class LinkedList:
             itr = itr.nxtPointer
             count += 1
 
+    def insert_at(self, index, element):
+        if index < 0 or index >= self.length() :
+            raise Exception('Invalid Index')
+        if index == 0 :
+            self.add_from_front(element) # If the index is 0 , then add the element at the front
+            return
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index-1 :
+                node = Node(element , itr.nxtPointer) # If the index is found , then add the element at the index
+                itr.nxtPointer = node # Update the pointer of the previous node to the new node
+                break
+            itr = itr.nxtPointer
+            count += 1
+
     def insert_values(self, list_of_elements):
         self.head = None # Empty the linked list
         for elements in list_of_elements : # iterate through the list of elements
@@ -80,13 +96,15 @@ class LinkedList:
 if __name__ == '__main__' :
     ll = LinkedList()
     ll.add_from_end(5)
-    ll.add_from_end(89)
-    ll.add_from_end(78)
-    ll.add_from_end(45)
-    ll.add_from_end(23)
-    ll.add_from_end(67)
+    ll.add_from_end(10)
+    ll.add_from_end(15)
+    ll.add_from_end(20)
+    ll.add_from_end(25)
     ll.print()
     print(ll.length())
-    ll.insert_values([1,2,3,4,5,6,7,8,9,10])
+    ll.remove_element(2)
     ll.print()
-    print(ll.length())
+    ll.insert_at(2, 15)
+    ll.print()
+    ll.insert_values([1,2,3,4,5])
+    ll.print()
