@@ -75,3 +75,41 @@ class LinkedList:
                 itr = itr.nxtPointer # Now the pointer of head will lead you to next node.
             print (llist)
 ```
+
+## Space and Time complexity for linked Lists
+
+### Time Complexity of Searching (Finding an Element) in Linked List:
+
+- **Best Case: O(1) –** If the element is found at the head of the list.
+    In the best case, the target element is located at the beginning of the linked list, so only one comparison is needed to find it.
+- **Worst Case: O(n) –** If the element is at the end of the list or not present.
+    In the worst case, the target element is either at the end of the list, requiring traversal through all elements, or not present at all, resulting in full traversal.
+- **Average Case: O(n) –** Similar to the worst case, as each element may need to be checked on average.
+    On average, the target element could be located anywhere within the list, requiring traversal through approximately half of the elements.
+
+### Time Complexity of Insertion (Adding an Element) in Linked List:
+
+- **Best Case: O(1) –** If inserting at the beginning of the list.
+    Insertion at the beginning requires updating the head pointer, which can be done in constant time.
+- **Worst Case: O(n) –** If inserting at the end or in the middle of the list, requiring traversal.
+    Inserting at the end or in the middle of the list requires traversing to the appropriate position, which may involve visiting all elements.
+- **Average Case: O(n) –** Similar to the worst case, as traversal may be needed on average.
+    On average, insertion could occur anywhere within the list, requiring traversal through approximately half of the elements.
+
+### Time Complexity of Deletion (Removing an Element) in Linked List:
+
+- **Best Case: O(1) –** If deleting the first element.
+    Deletion of the first element only requires updating the head pointer, which can be done in constant time.
+- **Worst Case: O(n) –** If deleting the last element or one in the middle, requiring traversal.
+    Deleting the last element or one in the middle requires traversal to locate the target element, which may involve visiting all elements.
+- **Average Case: O(n) –** Similar to the worst case, as traversal may be needed on average.
+    On average, the target element could be located anywhere within the list, requiring traversal through approximately half of the elements.
+
+### Time Complexity of Traversal in Linked List: O(n)
+
+- Each element needs to be visited once to perform any operation.
+
+### Time Complexity of Accessing (Getting/Setting) an element in Linked List: O(n)
+
+Typically O(n), as access requires traversal from the head to the desired position.
+Accessing an arbitrary element in the linked list requires traversal from the head to the desired position, which may involve visiting all elements.
