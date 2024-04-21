@@ -32,6 +32,34 @@ class LinkedList:
             itr = itr.nxtPointer # Traverse the linked list till the end
         itr.nxtPointer = Node(element , None) # Add the element at the end of the linked list
 
+    def length(self):
+        count = 0 # initiate a counter
+        itr = self.head
+        while itr :
+            count += 1 # increment the counter
+            itr = itr.nxtPointer
+        return count
+    
+    def remove_element(self, index):
+        if index < 0 or index >= self.length() :
+            raise Exception('Invalid Index') # If the index is invalid , raise an exception
+        if index == 0 :
+            self.head = self.head.nxtPointer # If the index is 0 , then update the head to the next node
+            return
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index-1 :
+              itr.nxtPointer = itr.nxtPointer.nxtPointer # If the index is found , then update the pointer of the previous node to the next node
+              break
+            itr = itr.nxtPointer
+            count += 1
+
+    def insert_values(self, list_of_elements):
+        self.head = None # Empty the linked list
+        for elements in list_of_elements : # iterate through the list of elements
+            self.add_from_end(elements) # add the elements in the end sequentially 
+
     #This method will print the Linked List
     def print(self):
         if self.head == None :
@@ -45,16 +73,20 @@ class LinkedList:
                 llist += str(itr.element) + '-->'
                 itr = itr.nxtPointer # Now the pointer of head will lead you to next node.
             print (llist)
-
     
 
 
-# Example usage of the LinkedList class
+# Example usage of LinkedList
 if __name__ == '__main__' :
-    llist = LinkedList()
-    llist.add_from_end(5)
-    llist.add_from_end(10)
-    llist.add_from_end(15)
-    llist.add_from_end(20)
-    llist.add_from_front(0)
-    llist.print()
+    ll = LinkedList()
+    ll.add_from_end(5)
+    ll.add_from_end(89)
+    ll.add_from_end(78)
+    ll.add_from_end(45)
+    ll.add_from_end(23)
+    ll.add_from_end(67)
+    ll.print()
+    print(ll.length())
+    ll.insert_values([1,2,3,4,5,6,7,8,9,10])
+    ll.print()
+    print(ll.length())
