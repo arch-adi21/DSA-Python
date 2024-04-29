@@ -23,5 +23,5 @@ In the picture you can clearly see that we have two reference items now. For the
 ## Insertion at any desired index
 
 - You must be aware that for inserting at any desired location , the user won't give any particular address , rather he will givex an index , just like an array . Now it's our duty to keep a count of number of nodes we traversed , so that we can mimic a index.
-- Initiate a node with `previous` and `next` as Null , 
+- Initiate a node with `previous` and `next` as Null , and assign the user input to `element`.
 - Start traversing the array , while maitaining a count (starting from 1 for head) , and when your count is 1 less than the index , this means that this node will be the previous node after we insert the desired node.
