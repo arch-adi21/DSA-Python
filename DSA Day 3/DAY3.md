@@ -5,3 +5,11 @@ In this section we will talk about doubly linked list in detail. Doubly Linked L
 ![Doubly Linked List](image.png)
 
 In the picture you can clearly see that we have two reference items now. For the head , the `previous` pointer will remain null. For the last / tail node , the next pointer will remain empty.
+
+## Inserting an element at the front
+
+- Like we did in the Singly Linked List , first we need to create a node with empty `previous` , `element` and `next`.
+- As there is no previous node at the front , we need to assign null to the `previous` reference of new node being inserted at the front
+- Update the element entered by the user
+- The `next` reference will refer to the previous head , which we just now replaced with a new node.
+- The `previous` of the previous head which we just now replaced with the new node , needs to be updated by replacing the null with the reference to the new node. 
