@@ -13,3 +13,15 @@ In the picture you can clearly see that we have two reference items now. For the
 - Update the element entered by the user
 - The `next` reference will refer to the previous head , which we just now replaced with a new node.
 - The `previous` of the previous head which we just now replaced with the new node , needs to be updated by replacing the null with the reference to the new node. 
+
+## Inserting an element at the end
+
+- Create a new node with `next` as Null , `element` as the input by the user , and `previous` will be assigned with a reference to the previous last node , which you will now replace.
+- In this scenario , you need to traverse the whole Linked List structure at the very minimum requirement.
+- When you reach at the end , the `next` reference of the current last node will now upadated while pointing to a new last node which you created before traversing . 
+
+## Insertion at any desired index
+
+- You must be aware that for inserting at any desired location , the user won't give any particular address , rather he will givex an index , just like an array . Now it's our duty to keep a count of number of nodes we traversed , so that we can mimic a index.
+- Initiate a node with `previous` and `next` as Null , 
+- Start traversing the array , while maitaining a count (starting from 1 for head) , and when your count is 1 less than the index , this means that this node will be the previous node after we insert the desired node.
