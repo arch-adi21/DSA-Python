@@ -27,3 +27,12 @@ In the picture you can clearly see that we have two reference items now. For the
 - Start traversing the array , while maitaining a count (starting from 1 for head) , and when your count is to the index , this means that this node will be the previous node after we insert the desired node. Change the `next` of this node to refer the new node which we created .
 - Update `previous` of new node to the location of this node at the required index.
 - Update the `next` of this new node to the `next` of the current node at required index. :) Well done
+
+## Deleting at any location
+
+- Maintain the count to mimic the indices.
+- Traverse to an index one less than the required index.
+- Change its `next` to the next pointer of the node at required index. You can do so by using self.next = node.next.next .
+- Now traverse to an index one more than the required index.
+- Change the `previous` of this node to `previous` of the node at our desired index.
+- So now u have done nothing fancy , but removed the references pointing towards the node at our desired index. 
