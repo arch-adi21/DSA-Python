@@ -114,6 +114,26 @@ class DoublyLinkedList :
             string += str(itr.element) + '-->'
             itr = itr.next
         print(string)
+
+    def __iter__(self) :
+
+        return DLLIterator(self.head)
+    
+class DLLIterator :
+
+    def __init__ (self , head) :
+        self.itr = head
+
+    def __iter__(self) :
+        return self
+    
+    def __next__(self) :
+        if self.itr == None :
+            raise StopIteration
+        
+        element = self.itr.element
+        self.itr = self.itr.next
+        return element
     
 
 if __name__ == '__main__':
@@ -129,4 +149,6 @@ if __name__ == '__main__':
     dll.delete_first()
     dll.delete_last()
     dll.delete_by_element(10)
+    for element in dll:
+        print(element)
     dll.print_forward() # 15-->10-->5-->35-->20-->25-->30-->
