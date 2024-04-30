@@ -68,6 +68,43 @@ class DoublyLinkedList :
             itr = itr.next
         print ("Element not found")
 
+    def delete_first(self):
+        if self.head == None :
+            raise Exception('Linked List is empty')
+        self.head = self.head.next
+        self.head.previous = None
+
+    def delete_last(self):
+        if self.head == None :
+            raise Exception('Linked List is empty')
+        
+        itr = self.head
+        while itr.next :
+            itr = itr.next
+        itr.previous.next = None
+
+    def delete_by_element(self , element):
+        if self.head == None :
+            raise Exception('Linked List is empty')
+        
+        itr = self.head
+        while itr :
+
+            if itr.next == None and itr.element == element :
+                self.delete_last()
+                return
+            
+            if itr.previous == None and itr.element == element :
+                self.delete_first()
+                return
+
+            if itr.element == element :
+                itr.previous.next = itr.next
+                itr.next.previous = itr.previous
+                return
+            itr = itr.next
+        print('Element not found')
+
     def print_forward(self) :
         if self.head == None :
             return f"Linked List is empty"
@@ -89,4 +126,7 @@ if __name__ == '__main__':
     dll.insert_at_last(30)
     dll.insert_at_index(3,35)
     dll.search(35) # 3
+    dll.delete_first()
+    dll.delete_last()
+    dll.delete_by_element(10)
     dll.print_forward() # 15-->10-->5-->35-->20-->25-->30-->
