@@ -31,7 +31,12 @@ class DoublyLinkedList :
     def length(self):
         if self.head == None :
             return 0
-        
+        count = 0
+        itr = self.head
+        while itr :
+            count += 1
+            itr = itr.next
+        return count
 
     def print_forward(self) :
         if self.head == None :
