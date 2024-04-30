@@ -55,6 +55,19 @@ class DoublyLinkedList :
             count += 1
             itr = itr.next
 
+    def search (self , element):
+        if self.head == None :
+            raise Exception('Linked List is empty')
+        itr = self.head
+        count = 0
+        while itr :
+            if itr.element == element :
+                print(count)
+                return
+            count += 1
+            itr = itr.next
+        print ("Element not found")
+
     def print_forward(self) :
         if self.head == None :
             return f"Linked List is empty"
@@ -63,14 +76,17 @@ class DoublyLinkedList :
         while itr :
             string += str(itr.element) + '-->'
             itr = itr.next
-        return string
+        print(string)
     
 
 if __name__ == '__main__':
     dll = DoublyLinkedList()
     dll.insert_at_front(5)
     dll.insert_at_front(10)
-    dll.insert_at_last(15)
+    dll.insert_at_front(15)
     dll.insert_at_last(20)
-    dll.insert_at_index(2,25)
-    dll.print_forward() # 10-->5-->25-->15-->20-->
+    dll.insert_at_last(25)
+    dll.insert_at_last(30)
+    dll.insert_at_index(3,35)
+    dll.search(35) # 3
+    dll.print_forward() # 15-->10-->5-->35-->20-->25-->30-->
