@@ -45,6 +45,7 @@ class DoublyLinkedList :
             self.insert_at_fron(element)
             return
         count = 0
+        itr = self.head
 
     def print_forward(self) :
         if self.head == None :
