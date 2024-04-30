@@ -10,7 +10,7 @@ class DoublyLinkedList :
     def __init__ (self):
         self.head = None
 
-    def insert_at_fron(self ,element):
+    def insert_at_front(self ,element):
         if self.head == None :
             self.head = Node(None,element,None)
             return
@@ -46,6 +46,14 @@ class DoublyLinkedList :
             return
         count = 0
         itr = self.head
+        while itr :
+            if count == index -1 :
+                node = Node (itr , element , itr.next)
+                itr.next = node
+                itr.next.previous = node
+                break
+            count += 1
+            itr = itr.next
 
     def print_forward(self) :
         if self.head == None :
@@ -60,9 +68,9 @@ class DoublyLinkedList :
 
 if __name__ == '__main__':
     dll = DoublyLinkedList()
-    dll.insert_at_fron(1)
-    dll.insert_at_fron(2)
-    dll.insert_at_fron(3)
-    dll.insert_at_last(4)
-    dll.insert_at_last(5)
-    print(dll.print_forward()) # 3-->2-->1-->4-->5-->
+    dll.insert_at_front(5)
+    dll.insert_at_front(10)
+    dll.insert_at_last(15)
+    dll.insert_at_last(20)
+    dll.insert_at_index(2,25)
+    dll.print_forward() # 10-->5-->25-->15-->20-->
