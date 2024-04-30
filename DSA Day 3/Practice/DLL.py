@@ -37,6 +37,14 @@ class DoublyLinkedList :
             count += 1
             itr = itr.next
         return count
+    
+    def insert_at_index (self , index , element):
+        if index < 0 or index > self.length():
+            raise Exception('Invalid Index')
+        if index == 0 :
+            self.insert_at_fron(element)
+            return
+        count = 0
 
     def print_forward(self) :
         if self.head == None :
