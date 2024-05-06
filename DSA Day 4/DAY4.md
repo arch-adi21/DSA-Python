@@ -4,4 +4,4 @@ This is is just a small modification of the singly linked list , where last node
 
 ![alt text](image.png)
 
-As you can see in the above example, the last node again points to the head node. By this point of 
+As you can see in the above example, the last node again points to the head node. By this point of life , you must be aquainted with basic features of linked list. So it will be easy to write the codes now.
