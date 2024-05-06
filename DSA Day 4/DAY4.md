@@ -24,4 +24,6 @@ As you can see in the above example, the last node again points to the head node
 
 ## Deletion of head node
 
--
+- Create a new node , make its `next` point towards the previous head.
+- Replace the head variable with this new node.
+- Travel to the last node and make its `next` pointing towards new head node.
