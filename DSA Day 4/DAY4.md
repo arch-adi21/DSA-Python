@@ -18,4 +18,10 @@ As you can see in the above example, the last node again points to the head node
 - The previous node , which was the last node earlier , will have it's `next` pointing towards this new last node.
 - The `next` of new last node will point towards head.
 
-## Deletion at 
+## Deletion of last node
+
+- Traverse to second last node and make its `next` pointing towards head.
+
+## Deletion of head node
+
+-
