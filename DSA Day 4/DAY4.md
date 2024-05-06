@@ -14,4 +14,8 @@ As you can see in the above example, the last node again points to the head node
 
 ## Insertion at end
 
-- Traverse to the last node 
+- Traverse to the last node , create a new node .
+- The previous node , which was the last node earlier , will have it's `next` pointing towards this new last node.
+- The `next` of new last node will point towards head.
+
+## Deletion at 
