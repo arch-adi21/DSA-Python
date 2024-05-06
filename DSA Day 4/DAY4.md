@@ -11,3 +11,7 @@ As you can see in the above example, the last node again points to the head node
 - Inserting at front means , you will create a node and assign the `next` of this node to the previous head and replace the head variable with this node.
 
 - Now you will traverse to the last node and change it's pointer to next node.
+
+## Insertion at end
+
+- Traverse to the last node 
