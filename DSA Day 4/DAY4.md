@@ -5,3 +5,9 @@ This is is just a small modification of the singly linked list , where last node
 ![alt text](image.png)
 
 As you can see in the above example, the last node again points to the head node. By this point of life , you must be aquainted with basic features of linked list. So it will be easy to write the codes now.
+
+## Insertion at front
+
+- Inserting at front means , you will create a node and assign the `next` of this node to the previous head and replace the head variable with this node.
+
+- Now you will traverse to the last node and change it's pointer to next node.
